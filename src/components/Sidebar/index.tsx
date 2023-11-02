@@ -1,4 +1,5 @@
 import { NavItem } from './NavItem'
+import { UsedSpaceWidget } from './UsedSpaceWidget'
 import { Logo } from './logo'
 import {
   BarChart2,
@@ -34,6 +35,7 @@ export function Sidebar() {
         <NavItem title="Support" icon={LifeBuoy} />
         <NavItem title="Settings" icon={Settings} />
       </div>
+      <UsedSpaceWidget />
     </aside>
   )
 }
