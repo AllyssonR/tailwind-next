@@ -1,6 +1,16 @@
-import { MainNavigation } from '../MainNavigation'
+import { NavItem } from './NavItem'
 import { Logo } from './logo'
-import { Search } from 'lucide-react'
+import {
+  BarChart2,
+  CheckSquare,
+  Flag,
+  Home,
+  Layers3,
+  LifeBuoy,
+  Search,
+  Settings,
+  Users,
+} from 'lucide-react'
 export function Sidebar() {
   return (
     <aside className=" flex flex-col gap-6 border-r border-zinc-200 px-5 py-8">
@@ -12,7 +22,18 @@ export function Sidebar() {
           placeholder="Search"
         />
       </div>
-      <MainNavigation />
+      <nav className="space-x-0.5">
+        <NavItem title="Home" icon={Home} />
+        <NavItem title="Dashboard" icon={BarChart2} />
+        <NavItem title="Projets" icon={Layers3} />
+        <NavItem title="Tasks" icon={CheckSquare} />
+        <NavItem title="Reporting" icon={Flag} />
+        <NavItem title="Users" icon={Users} />
+      </nav>
+      <div className="mt-auto flex flex-col gap-6">
+        <NavItem title="Support" icon={LifeBuoy} />
+        <NavItem title="Settings" icon={Settings} />
+      </div>
     </aside>
   )
 }
