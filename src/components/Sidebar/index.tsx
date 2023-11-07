@@ -12,6 +12,7 @@ import {
   Settings,
   Users,
 } from 'lucide-react'
+import { Profile } from './Profile'
 export function Sidebar() {
   return (
     <aside className=" flex flex-col gap-6 border-r border-zinc-200 px-5 py-8">
@@ -36,6 +37,8 @@ export function Sidebar() {
         <NavItem title="Settings" icon={Settings} />
       </div>
       <UsedSpaceWidget />
+      <div className="h-px bg-zinc-200" />
+      <Profile />
     </aside>
   )
 }
