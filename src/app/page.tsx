@@ -1,4 +1,10 @@
 import { SettingsTabs } from '@/components/SettingsTabs'
+import {
+  InputRoot,
+  InputControl,
+  InputPrefix,
+} from '../components/Sidebar/input'
+import { Mail } from 'lucide-react'
 export default function Home() {
   return (
     <>
@@ -28,8 +34,67 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <form id="settings" action="" className="mt-6 flex w-full flex-col">
-          form
+        <form
+          id="settings"
+          action=""
+          className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
+        >
+          <div className="grid grid-cols-form gap-3 ">
+            <label
+              htmlFor="firstName"
+              className="text-sm font-medium text-zinc-500"
+            >
+              Name
+            </label>
+            <div className="grid grid-cols-2 gap-6">
+              <InputRoot>
+                <InputControl id="firstName" defaultValue={'Diego'} />
+              </InputRoot>
+              <InputRoot>
+                <InputControl defaultValue={'Fernandes'} />
+              </InputRoot>
+            </div>
+          </div>
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-zinc-500"
+            >
+              Email address
+            </label>
+            <div className="grid grid-cols-2 gap-6">
+              <InputRoot>
+                <InputPrefix>
+                  <Mail className="h-5 w-5 text-zinc-500" />
+                </InputPrefix>
+                <InputControl
+                  id="email"
+                  type="email"
+                  defaultValue={'diegofernandes@rocketseat.com'}
+                />
+              </InputRoot>
+            </div>
+          </div>
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-zinc-500"
+            >
+              Your photp
+            </label>
+            <div className="grid grid-cols-2 gap-6">
+              <InputRoot>
+                <InputPrefix>
+                  <Mail className="h-5 w-5 text-zinc-500" />
+                </InputPrefix>
+                <InputControl
+                  id="email"
+                  type="email"
+                  defaultValue={'diegofernandes@rocketseat.com'}
+                />
+              </InputRoot>
+            </div>
+          </div>
         </form>
       </div>
     </>
