@@ -11,6 +11,7 @@ export function Control(props: ControlProps) {
       return
     }
     const files = Array.from(event.target.files)
+    onFilesSelected(files)
   }
   return (
     <input
